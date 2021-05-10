@@ -1,0 +1,29 @@
+version: '3'
+services:
+  node:
+    container_name: node
+    image: node:10
+    user: node
+    command: bash -c "chmod -R 744 ./ && npm install && npm start"
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./node_src:/home/node/app
+    working_dir: /home/node/app
+  react:
+    container_name: react
+    image: node:10
+    user: node
+    command: bash -c "chmod -R 744 ./ && npm install && npm start"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./react_src:/home/node/app
+    working_dir: /home/node/app
+  mongo:
+    container_name: mongo
+    image: mongo:4.0-xenial
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/db
