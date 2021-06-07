@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useContext, useEffect, useState} from 'react';
+import {Route, Switch, useHistory, useRouteMatch} from "react-router";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import {BrowserRouter as Router} from "react-router-dom";
+import Auth, {LoginContext, useLogin} from "./components/Login";
+import Inventory from "./components/Inventory";
+
+export const App = () => {
+    return (
+        <div className="app">
+            <Router>
+                <LoginContext.Provider value={useLogin()}>
+                    <Switch>
+                        <Route path="/">
+                            <Auth/>
+                        </Route>
+                        <Route path="/inventory">
+                            <div>Bonjour tout le monde</div>
+                        </Route>
+                    </Switch>
+                </LoginContext.Provider>
+            </Router>
+        </div>
+    )
 }
 
 export default App;

@@ -2,16 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3bb2244-c1f9-42b1-9df7-a2290fab74c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_src/user/router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react_src/src/Dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react_src/src/components/Inventory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react_src/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_src/connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_src/connection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_src/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_src/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_src/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_src/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_src/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react_src/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_src/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react_src/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_src/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/react_src/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_src/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react_src/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_src/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_src/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/react_src/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1sL0iO94FuxoO1nrDIMTNSXjpkA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -20,6 +51,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -29,6 +61,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -42,6 +75,12 @@
       <workItem from="1620636691442" duration="631000" />
       <workItem from="1620641247219" duration="5000" />
       <workItem from="1620641260085" duration="75000" />
+      <workItem from="1620720463697" duration="102000" />
+      <workItem from="1622444959838" duration="23482000" />
+      <workItem from="1622712106335" duration="683000" />
+      <workItem from="1623049201479" duration="5530000" />
+      <workItem from="1623063535017" duration="862000" />
+      <workItem from="1623071453415" duration="4526000" />
     </task>
     <servers />
   </component>

@@ -14,7 +14,7 @@ const connect = () => {
             }
 
             db_client = client;
-            db_connection = client.db('todo')
+            db_connection = client.db('rpg')
             resolve({ db_client, db_connection })
         });
 

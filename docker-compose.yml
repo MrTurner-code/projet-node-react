@@ -1,7 +1,7 @@
 version: '3'
 services:
   node:
-    container_name: node
+    container_name: node_project
     image: node:10
     user: node
     command: bash -c "chmod -R 744 ./ && npm install && npm start"
@@ -11,7 +11,7 @@ services:
       - ./node_src:/home/node/app
     working_dir: /home/node/app
   react:
-    container_name: react
+    container_name: react_project
     image: node:10
     user: node
     command: bash -c "chmod -R 744 ./ && npm install && npm start"
@@ -21,7 +21,7 @@ services:
       - ./react_src:/home/node/app
     working_dir: /home/node/app
   mongo:
-    container_name: mongo
+    container_name: mongo_project
     image: mongo:4.0-xenial
     ports:
       - "27017:27017"
