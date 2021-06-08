@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 
 exports.signup = async (req, res) => {
     let newUser = req.body;
+    newUser.characters = [];
     try {
         let {db_client, db_connection} = await connect();
         try {
@@ -28,15 +29,15 @@ exports.signup = async (req, res) => {
         res.send("Server error");
     }
 }
-exports.login = async(req,res) => {
+exports.login = async (req, res) => {
     try {
         const loginData = req.body;
 
-        let { db_client, db_connection } = await connect();
+        let {db_client, db_connection} = await connect();
 
         let user = await db_connection
             .collection("users")
-            .findOne({ username: loginData.username });
+            .findOne({username: loginData.username});
         try {
             if (!user) {
                 throw new Error("Invalid username");
@@ -52,6 +53,7 @@ exports.login = async(req,res) => {
             }
 
             req.session.username = user.username;
+            req.session._id = user._id;
             req.session.loggedIn = true;
 
             res.send("Logged in");
@@ -89,5 +91,18 @@ exports.getUsers = async (req, res) => {
     } catch (e) {
         console.log(e)
     }
+}
+exports.logout = async (req, res) => {
+    req.session.destroy(err => {
+        if (err) {
+            console.log(err);
+            res.status(500);
+            res.send("An error occured while logging out");
+        } else {
+            console.log("Logged out");
+            res.send("Logged out");
+        }
+    });
+
 }
 

@@ -1,9 +1,9 @@
 import './App.css';
 import React, {useContext, useEffect, useState} from 'react';
-import {Route, Switch, useHistory, useRouteMatch} from "react-router";
-
-import {BrowserRouter as Router} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Header from "./components/Header"
 import Auth, {LoginContext, useLogin} from "./components/Login";
+import Dashboard from "./components/Dashboard";
 import Inventory from "./components/Inventory";
 
 export const App = () => {
@@ -11,12 +11,13 @@ export const App = () => {
         <div className="app">
             <Router>
                 <LoginContext.Provider value={useLogin()}>
+                    <Header/>
                     <Switch>
-                        <Route path="/">
+                        <Route path="/auth">
                             <Auth/>
                         </Route>
-                        <Route path="/inventory">
-                            <div>Bonjour tout le monde</div>
+                        <Route path="/dashboard">
+                            <Dashboard/>
                         </Route>
                     </Switch>
                 </LoginContext.Provider>
