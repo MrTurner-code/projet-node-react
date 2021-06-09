@@ -12,7 +12,7 @@ const NewCharacter = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         let newCharacter = character;
-        axios.post('https://localhost:3000/character', newCharacter, {withCredentials: true})
+        axios.post('http://localhost:3001/character', newCharacter, {withCredentials: true})
             .then(response => {
                 alert(response.data)
             }).catch(e => alert(e))
@@ -26,7 +26,7 @@ const NewCharacter = (props) => {
     };
 
     return (
-        <div>{display ?
+        <div>{display===true ?
             <form onSubmit={handleSubmit}>
                 <input type="text" onChange={handleChange("name")}
                        placeholder="le Nom de votre personnnage"/>

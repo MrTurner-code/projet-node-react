@@ -46,7 +46,6 @@ const Login = (props) => {
                 withCredentials: true,
             })
             .then(() => {
-                console.log('authenticatde')
                 setAuthenticated(true);
             })
             .catch((err) => {
@@ -61,7 +60,8 @@ const Login = (props) => {
             });
     };
 
-    const handleSignup = async () => {
+    const handleSignup = async (e) => {
+        e.preventDefault()
         axios
             .post("http://localhost:3001/auth/signup", loginData, {
                 withCredentials: true,

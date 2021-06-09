@@ -1,6 +1,9 @@
+const express =require('express');
+
 exports.verifySession = (req, res, next) => {
     if (req.session && req.session.loggedIn === true) {
         console.log("Logged in, you can proceed");
+        console.log(req.session.session)
         next();
     } else {
         res.status(403);

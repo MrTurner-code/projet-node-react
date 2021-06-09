@@ -1,9 +1,10 @@
 import './App.css';
 import React, {useContext, useEffect, useState} from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import Header from "./components/Header"
 import Auth, {LoginContext, useLogin} from "./components/Login";
 import Dashboard from "./components/Dashboard";
+import EditCharacter from "./components/EditCharacter";
 import Inventory from "./components/Inventory";
 
 export const App = () => {
@@ -18,6 +19,9 @@ export const App = () => {
                         </Route>
                         <Route path="/dashboard">
                             <Dashboard/>
+                        </Route>
+                        <Route path="/edit-character/:id">
+                            <EditCharacter/>
                         </Route>
                     </Switch>
                 </LoginContext.Provider>

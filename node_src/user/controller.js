@@ -47,13 +47,10 @@ exports.login = async (req, res) => {
                 loginData.password,
                 user.password
             );
-
             if (!samePassword) {
                 throw new Error("Invalid password");
             }
-
             req.session.username = user.username;
-            req.session._id = user._id;
             req.session.loggedIn = true;
 
             res.send("Logged in");
